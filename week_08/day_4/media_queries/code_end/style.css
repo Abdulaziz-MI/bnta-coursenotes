@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #4b73c1;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+header,
+section,
+footer {
+  padding: 20px 10%;
+}
+
+header {
+  background-color: #f6e7d5;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  width: 25%;
+}
+
+header nav {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+section {
+  min-height: 500px;
+}
+.hero {
+  background-image: url(./assets/duck-hero.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.products {
+  background-color: #e5efdb;
+}
+
+.products__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.products__card img {
+  width: 100%;
+}
+
+.contact {
+  background-color: #e0eaf5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact__text {
+  width: 60%;
+}
+.contact__form {
+  width: 40%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+  max-width: 300px;
+  margin: 10px;
+}
+
+button,
+input[type="submit"] {
+  background-color: #4c73c1;
+  padding: 10px;
+  width: 100px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 5px solid #3c5370;
+}
+
+footer {
+  background-color: #fdf2d1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer div,
+footer nav {
+  display: flex;
+  flex-direction: column;
+}
+
+footer a,
+footer p {
+  margin: 10px 0;
+}
+
+.footer__logo {
+  align-items: flex-end;
+}
+
+footer img {
+  width: 150px;
+}
+
+@media screen and (max-width: 900px) {
+  .products__container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header nav {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .products__container,
+  footer {
+    grid-template-columns: 1fr;
+  }
+  header nav {
+    display: none;
+  }
+  .contact {
+    flex-direction: column;
+  }
+  .contact div {
+    width: 100%;
+  }
+}

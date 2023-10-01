@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "dcde5c12-82ab-4b68-a445-3f5f1bfc3c22",
+		"name": "Chocolate API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24253852"
+	},
+	"item": [
+		{
+			"name": "chocolates",
+			"item": [
+				{
+					"name": "GET get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER_URL}}/chocolates",
+							"host": [
+								"{{SERVER_URL}}"
+							],
+							"path": [
+								"chocolates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"A new chocolate\",\n    \"cocoaPercentage\": 40,\n    \"estate\": {\n        \"id\": 1,\n        \"name\": \"Rabot Estate\",\n        \"country\": \"St Lucia\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SERVER_URL}}/chocolates",
+							"host": [
+								"{{SERVER_URL}}"
+							],
+							"path": [
+								"chocolates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER_URL}}/chocolates/2",
+							"host": [
+								"{{SERVER_URL}}"
+							],
+							"path": [
+								"chocolates",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET delete by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER_URL}}/chocolates/7",
+							"host": [
+								"{{SERVER_URL}}"
+							],
+							"path": [
+								"chocolates",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "estates",
+			"item": [
+				{
+					"name": "GET get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER_URL}}/estates",
+							"host": [
+								"{{SERVER_URL}}"
+							],
+							"path": [
+								"estates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"A new estate\",\n    \"country\": \"St Lucia\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SERVER_URL}}/estates",
+							"host": [
+								"{{SERVER_URL}}"
+							],
+							"path": [
+								"estates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER_URL}}/estates/2",
+							"host": [
+								"{{SERVER_URL}}"
+							],
+							"path": [
+								"estates",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "SERVER_URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

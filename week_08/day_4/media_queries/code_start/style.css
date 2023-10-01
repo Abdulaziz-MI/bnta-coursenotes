@@ -1,0 +1,66 @@
+header {
+  background-color: #f6e7d5;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  width: 25%;
+}
+
+header nav {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.products {
+  background-color: #e5efdb;
+}
+
+.products__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.products__card img {
+  width: 100%;
+}
+
+.contact {
+  background-color: #e0eaf5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact div {
+  width: 50%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: #fdf2d1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer div,
+footer nav {
+  display: flex;
+  flex-direction: column;
+}
+
+footer a,
+footer p {
+  margin: 10px 0;
+}
+
+footer img {
+  width: 150px;
+}
